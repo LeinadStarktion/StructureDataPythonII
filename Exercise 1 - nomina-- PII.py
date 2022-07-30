@@ -1,11 +1,7 @@
-from turtle import position
-
-
 Legal = [1000000]
-
+Nomina = True
 Health = [0.04]
 Pension = [0.04]
-
 CC = (int(input("Write your ID number")))
 
 
@@ -18,6 +14,8 @@ last = input()
 print("What is your position?")
 position = input()
 
+print("What is your work type ?")
+Type = input()
 print("what is your salary? ")
 salary = int(input())
 
@@ -30,7 +28,7 @@ if salary == 1000000:
 else:
     print("Your do not have transportation benefit")
 
-print ("")
+print ("")    
 print ("----------------------------------------------------")
 print ("|                                                  |")
 print (f"Name : {name}")
@@ -42,9 +40,13 @@ print(f"Your total salary for days worked :{SXD}")
 BXH = (SXD*0.04)
 print(f"Your benefit health is :{BXH}")
 BXP = (SXD*0.04)
-print(f"Your benefit pension is :{BXP}")
+PORCFOURTY = (salary*0.4)
+print (f"Your porcentual of quotation is : {PORCFOURTY}")
+print(f"Your benefit pension is : $ {BXP}")
 BXHP = BXH+BXP
 print (f"Your total benefits is : {BXHP}")
+TOTAL = salary-BXHP
+print (f"Your total salary is : $ {TOTAL}")
 print ("")
 print ("----------------------------------------------------")
 print ("|                                                  |")
